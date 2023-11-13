@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+
+    >
+
+    <TextView
+        android:id="@+id/tv_nameProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ten"
+        android:textSize="25dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tv_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gia tien"
+        android:textSize="20sp"
+       />
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Loai"
+        android:textStyle="italic"
+        android:textSize="20sp"/>
+
+</LinearLayout>
