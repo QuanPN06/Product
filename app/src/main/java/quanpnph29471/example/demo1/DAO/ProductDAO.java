@@ -24,7 +24,7 @@ public class ProductDAO {
     //Ham lay danh sach the loai
     public ArrayList<Product> getList (){
         ArrayList<Product> list = new ArrayList<>();
-        Cursor c = db.rawQuery("SELECT * FROM tb_product",null);
+        Cursor c = db.rawQuery("SELECT tb_product.*, tb_cat.name FROM tb_product INNER JOIN tb_cat ON tb_cat.id = tb_product.id_cat", null);
         if(c.getCount()>0){
             c.moveToFirst();
             do {

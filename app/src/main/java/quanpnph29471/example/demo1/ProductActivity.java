@@ -24,7 +24,7 @@ import quanpnph29471.example.demo1.Model.Category;
 import quanpnph29471.example.demo1.Model.Product;
 
 public class ProductActivity extends AppCompatActivity {
-    TextInputLayout ed_name,ed_price,ed_cat;
+    TextInputLayout ed_name,ed_price;
     Button btn_add,btn_update, btn_del;
     ListView lv_pro;
 
@@ -47,7 +47,7 @@ public class ProductActivity extends AppCompatActivity {
 
         ed_name = findViewById(R.id.ed_namePro);
         ed_price = findViewById(R.id.ed_Price);
-        ed_cat =findViewById(R.id.ed_idCat);
+
         btn_add =findViewById(R.id.btnAdd);
         btn_del = findViewById(R.id.btnDel);
         btn_update = findViewById(R.id.btnUpdate);
@@ -102,7 +102,7 @@ public class ProductActivity extends AppCompatActivity {
                 objCurrent = list.get(i);
                 ed_name.getEditText().setText(objCurrent.getName());
                 ed_price.getEditText().setText(objCurrent.getPrice()+"");
-                ed_cat.getEditText().setText(objCurrent.getId_cat()+"");
+//                ed_cat.getEditText().setText(objCurrent.getId_cat()+"");
 
 
                 int value = -1;
@@ -121,11 +121,11 @@ public class ProductActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String name_pro = ed_name.getEditText().getText().toString();
                 int price = Integer.valueOf(ed_price.getEditText().getText().toString());
-                int id_cat = Integer.valueOf(ed_cat.getEditText().getText().toString());
+
 
                 objCurrent.setName(name_pro);
                 objCurrent.setPrice(price);
-                objCurrent.setId_cat(id_cat);
+                objCurrent.setId_cat(idSP);
 
                 int check = productDAO.update(objCurrent);
                 if(check>0){
